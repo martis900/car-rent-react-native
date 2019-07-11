@@ -6,7 +6,8 @@ import Profile from '../screens/Profile';
 
 const b = createStackNavigator(
     {
-        Profile
+        Profile,
+        yufyifity
     }
 );
 
