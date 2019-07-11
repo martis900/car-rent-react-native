@@ -1,0 +1,102 @@
+{
+    "HotDeals": [
+        {
+            "id": 1,
+            "name": "BMW",
+            "model": "8 series",
+            "price": 340,
+            "img": [
+                "https://cdn.jdpower.com/ChromeImageGallery/ColorMatched/Transparent/640/cc_2019BMC87_03_640/cc_2019BMC870010_03_640_C38.png",
+                "https://bmwlangley.com/sites/default/files/styles/scale_width_660/public/assets/vehicle/color_picker/2019/bmw/8-series/cc_2019BMC870010_01_1280_C38.png?itok=pfx1lHXI",
+                "https://c4d709dd302a2586107d-f8305d22c3db1fdd6f8607b49e47a10c.ssl.cf1.rackcdn.com/thumbnails/stock-images/b13749df4cb6d06902f70fb865f9e2cf.png",
+                "https://c4d709dd302a2586107d-f8305d22c3db1fdd6f8607b49e47a10c.ssl.cf1.rackcdn.com/stock-images/0d2fcdf55939b44ca966290e5279bfa6.png",
+                "https://cnet2.cbsistatic.com/img/6x-Nv1RANw7QE-pH8UdvBjAtLvQ=/868x651/2019/02/08/95e40aa1-9e1d-4839-a883-24c665731626/2019BMC870009_1280_06.png"
+            ],
+            "features": [
+                {
+                    "name": "engine",
+                    "info": "V10 5.2l 620hp"
+                },
+                {
+                    "name": "seats",
+                    "info": "2 seats"
+                },
+                {
+                    "name": "speed",
+                    "info": "0 - 100 kph 3.2s"
+                },
+                {
+                    "name": "gears",
+                    "info": "Automatic"
+                },
+                {
+                    "name": "space",
+                    "info": "2 bags"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Mercedes",
+            "model": "G Class",
+            "price": 540,
+            "img": [
+                "https://st.motortrend.com/uploads/sites/10/2017/05/2017-mercedes-benz-g-class-amg-g63-suv-side-view.png",
+                "https://st.motortrend.com/uploads/sites/10/2017/05/2017-mercedes-benz-g-class-amg-g63-suv-side-view.png"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Audi",
+            "model": "R8 Coupe",
+            "price": 360,
+            "img": [
+                "https://img.sm360.ca/ir/w640h390c/images/newcar/2018/audi/r8-coupe/v10/coupe/exteriorColors/12302_cc0640_032_L1.png"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "BMW",
+            "model": "8 series",
+            "price": 340,
+            "img": [
+                "https://cdn.jdpower.com/ChromeImageGallery/ColorMatched/Transparent/640/cc_2019MBCAR_03_640/cc_2019MBCAR0013_03_640_040.png"
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Bentley",
+            "model": "Competitor",
+            "price": 340,
+            "img": [
+                "https://purepng.com/public/uploads/large/purepng.com-bentleybentleybentley-motorsbritishmanufacturerluxury-cars-17015274100855zqsl.png"
+            ]
+        },
+        {
+            "id": 6,
+            "name": "BMW",
+            "model": "8 series",
+            "price": 340,
+            "img": [
+                "http://www.pngmart.com/files/3/Aventador-PNG-Photos.png"
+            ]
+        }
+    ],
+    "TopDealers": [
+        {
+            "name": "Hertz",
+            "img": "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/d4/ba/f8/d4baf8a8-7ceb-5dd4-fa7a-04b0d1649018/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.jpeg/690x0w.jpg",
+            "rating": 4
+        },
+        {
+            "name": "Avis",
+            "img": "https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/e7/b5/f6/e7b5f653-2c1e-c186-d209-9e31c235812a/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-10.png/690x0w.jpg",
+            "rating": 5
+        },
+        {
+            "name": "Tesla Rental",
+            "img": "https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/10/59/87/105987de-be62-196a-da0e-c59340f4a7de/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-5.png/690x0w.jpg",
+            "rating": 3
+        }
+    ]
+}
