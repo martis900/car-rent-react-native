@@ -13,8 +13,7 @@ export default createStackNavigator(
         Payment
     },
     {
-        initialRouteName: "Home",
-        transitionConfig: () => fromRight(),
+        initialRouteName: "Home", transitionConfig: () => fromRight(),
         navigationOptions: ({ navigation }) => {
             let tabBarVisible = true;
             if (navigation.state.index > 0) {
@@ -23,8 +22,6 @@ export default createStackNavigator(
             return {
                 tabBarVisible,
             };
-        }
+        },
     },
-
-
 );

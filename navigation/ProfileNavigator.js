@@ -4,10 +4,8 @@ import { createStackNavigator } from 'react-navigation';
 
 import Profile from '../screens/Profile';
 
-const b = createStackNavigator(
+export default createStackNavigator(
     {
         Profile
     }
 );
-
-export default b;

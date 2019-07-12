@@ -1,5 +1,5 @@
 import React from 'react'
-import { Platform, View, Text, TouchableOpacity, Image } from 'react-native'
+import { Platform, View, Text, TouchableOpacity, Image, StatusBar } from 'react-native'
 
 import Icon from "react-native-vector-icons/Ionicons"
 import Rating from './../components/Rating'
@@ -37,6 +37,7 @@ const Rent = (props) => {
 
     return (
         <View style={{ display: 'flex', flexDirection: 'column', flex: 1, backgroundColor: 'rgb(21, 76,196)' }}>
+            <StatusBar backgroundColor="rgb(21, 76,196)" barStyle="light-content" />
             <View style={{ display: 'flex', flexDirection: 'row', paddingTop: 20, paddingLeft: 15 }}>
                 <Text style={{ fontWeight: 'bold', fontSize: 36, color: '#ffffff' }}>{CarData.name} </Text>
                 <Text style={{ paddingTop: 7, fontWeight: "normal", fontSize: 28, color: '#ffffff' }}>{CarData.model}</Text>
@@ -59,14 +60,14 @@ const Rent = (props) => {
                         <Text style={{ color: '#ffffff' }}> Miami Beach - South Beach </Text>
                     </View>
 
-                    <View style={{ display: 'flex', flex: 3,    }}>
+                    <View style={{ display: 'flex', flex: 3, }}>
                         <Rating rating={3} colorSelected={'#ffffff'} color={"grey"} />
                     </View>
                 </View>
             </View>
 
             <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: "center", flex: 1 }}>
-                <Text style={{ color: '#ffffff', fontSize: 18, alignSelf: 'center', marginLeft: 40 }}>{CarData.price}/day</Text>
+                <Text style={{ color: '#ffffff', fontSize: 18, alignSelf: 'center', marginLeft: 40 }}>${CarData.price} / day</Text>
                 <TouchableOpacity>
                     <View style={{ height: 55, width: 150, borderRadius: 10, backgroundColor: 'black', alignItems: 'center', justifyContent: 'center', alignSelf: 'center', marginRight: 40 }}>
                         <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>

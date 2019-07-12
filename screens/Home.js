@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { Platform, View, Text, Button, TouchableOpacity, FlatList, ScrollView, Alert, Dimensions, Image, SafeAreaView } from 'react-native'
+import { Platform, View, Text, Button, TouchableOpacity, FlatList, ScrollView, Alert, Dimensions, Image, SafeAreaView, StatusBar } from 'react-native'
 import Icon from "react-native-vector-icons/Feather"
 import styled from 'styled-components'
 import Rating from './../components/Rating'
 import HotDealsList from './../data/HotDeals.json';
 import { SliderBox } from 'react-native-image-slider-box';
 import ImageScale from 'react-native-scalable-image';
-
+import Payment from './Payment';
+import BottomDrawer from 'rn-bottom-drawer';
 
 const SearchBox = styled.View`
     width: 90%;
@@ -17,7 +18,9 @@ const SearchBox = styled.View`
     height: 45px;
     margin-top: 20px;
     flex-direction: row;
-    elevation: 12;
+    border-width: 1;
+    border-color: #d3d3d3;
+    elevation: 0;
     box-shadow: 0 14px 22px rgba(0,0,0,0.33);
 `;
 
@@ -124,45 +127,90 @@ const TitleComponent = (FirstWord, SecondWord) => {
     )
 }
 
-
 const Home = ({ navigation }) => {
+    const [color, setColor] = useState('white');
+    const [arrowUp, setArrowUp] = useState(true);
+    const [headerVisable, setheaderVisability] = useState(true)
+
+    useEffect(() => {
+
+    }, [])
+    // navigation.setParams({
+    //     v: true
+    // })
     return (
-        <SafeAreaView>
-            <View style={{ display: 'flex', backgroundColor: 'whites' }}>
-                {searchBoxComponent()}
-                <ScrollView>
+        <View>
+            <StatusBar backgroundColor={color} barStyle={color === 'white' ? "dark-content" : 'light-content'} />
+            <SafeAreaView>
+                <View style={{ display: 'flex', backgroundColor: 'white' }}>
+                    {searchBoxComponent()}
+                    <ScrollView >
+                        <View style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', height: 'auto' }}>
+                            <View style={{ display: 'flex', }}>
+                                {TitleComponent("Hot", "deals")}
+                                <View style={{ marginTop: 15 }} >
+                                    <HotDeals navigation={navigation} />
+                                </View>
+                            </View>
 
-                    <View style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', height: screenHeight - 90 - (Platform.OS === 'ios' ? 80 + 40 : 45 + 15) - (isX ? 30 : 0) }}>
+                            <View style={{ display: 'flex' }}>
+                                {TitleComponent("Top", "dealers")}
+                                <View style={{ marginTop: 15, paddingLeft: 0 }} >
+                                    <TopDealers />
+                                </View>
+                            </View>
 
-                        <View style={{ display: 'flex', }}>
-                            {TitleComponent("Hot", "deals")}
-                            <View style={{ marginTop: 15 }} >
-                                <HotDeals navigation={navigation} />
+                            <View style={{ display: 'flex' }}>
+                                {TitleComponent("Top", "dealers")}
+                                <View style={{ marginTop: 15, paddingLeft: 0 }} >
+                                    <TopDealers />
+                                </View>
+                            </View>
+
+                            <View style={{ display: 'flex' }}>
+                                {TitleComponent("Top", "dealers")}
+                                <View style={{ marginTop: 15, paddingLeft: 0 }} >
+                                    <TopDealers />
+                                </View>
                             </View>
                         </View>
+                    </ScrollView>
+                </View >
+            </SafeAreaView>
 
-                        <View style={{ display: 'flex' }}>
-                            {TitleComponent("Top", "dealers")}
-                            <View style={{ marginTop: 15, paddingLeft: 0 }} >
-                                <TopDealers />
-                            </View>
-                        </View>
-                    </View>
-                </ScrollView>
-            </View >
-        </SafeAreaView>
+            <BottomDrawer
+                containerHeight={600}
+                offset={0}
+                startUp={false}
+                roundedEdges={true}
+                downDisplay={550}
+                onExpanded={() => {
+                    setColor('rgb(21, 76,196)')
+                    setArrowUp(false)
+                }}
+                onCollapsed={() => {
+                    setArrowUp(true)
+                }}>
+
+                <Payment arrowUp={arrowUp} />
+            </BottomDrawer >
+        </View >
     )
 }
 
-Home.navigationOptions = {
-    header: (
-        <View style={{ display: 'flex', flexDirection: 'row', backgroundColor: 'white', justifyContent: 'space-between', height: Platform.OS === 'ios' ? 80 : 45, alignItems: 'center', paddingTop: Platform.OS === 'ios' ? 40 : 15 }}>
-            <Text style={{ fontSize: 36, fontWeight: "bold", paddingLeft: 15, color: 'black' }}>Browse cars</Text>
-            <TouchableOpacity>
-                <Icon style={{ paddingRight: 15 }} name="align-right" color="grey" size={20} />
-            </TouchableOpacity>
-        </View>
-    )
+Home.navigationOptions = ({ navigation }) => {
+    return {
+        header: (
+            <View style={{ display: 'flex', flexDirection: 'row', backgroundColor: 'white', justifyContent: 'space-between', height: Platform.OS === 'ios' ? 80 : 45, alignItems: 'center', paddingTop: Platform.OS === 'ios' ? 40 : 15 }}>
+                <Text style={{ fontSize: 36, fontWeight: "bold", paddingLeft: 15, color: 'black' }}>Browse cars</Text>
+                <TouchableOpacity>
+                    <Icon style={{ paddingRight: 15 }} name="align-right" color="grey" size={20} />
+                </TouchableOpacity>
+            </View>
+        ),
+    }
 }
 
 export default Home;
+
+

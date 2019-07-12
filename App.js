@@ -4,6 +4,7 @@ import { createAppContainer, createBottomTabNavigator } from 'react-navigation';
 import Navigator from './navigation/MainNavigation';
 import ProfileNavigator from './navigation/ProfileNavigator';
 import Icon from "react-native-vector-icons/Entypo"
+import Payment from './screens/Payment'
 console.disableYellowBox = true;
 const TabNavigator = createBottomTabNavigator({
     Home: Navigator,
@@ -23,7 +24,7 @@ const TabNavigator = createBottomTabNavigator({
     //     }),
     // },
     Directions: ProfileNavigator,
-    Profile: ProfileNavigator
+    Profile: Payment
 },
     {
         defaultNavigationOptions: ({ navigation }) => ({
@@ -47,10 +48,24 @@ const TabNavigator = createBottomTabNavigator({
         tabBarOptions: {
             activeTintColor: 'rgb(21,96,196)',
             inactiveTintColor: 'rgb(133,146,165)',
-            tabBarLabel: null
-        },
-
+            tabBarLabel: null,
+            visible: true,
+        }
     }
 )
 
-export default createAppContainer(TabNavigator);
+const Nav = createAppContainer(TabNavigator);
+
+export default App = () => {
+    return (
+        <View style={{ display: 'flex', flex: 1 }}>
+            <Nav />
+            <View style={{ width: '90%', height: 60, backgroundColor: '#2ecc71', display: 'flex', position: 'absolute', top: 0, left: '5%', borderRadius: 15, marginTop: 10, alignSelf: 'center', justifyContent: 'center' }}>
+                <Text style={{ display: 'flex', alignSelf: 'center', color: '#ffffff', fontSize: 18 }}>
+                    Sussesfuly unsubscribed
+                </Text>
+            </View>
+        </View>
+        // HERE YOU CAN OVERLAY TABBAR AND HEADER
+    )
+}
