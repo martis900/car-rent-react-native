@@ -60,11 +60,11 @@ export default App = () => {
     return (
         <View style={{ display: 'flex', flex: 1 }}>
             <Nav />
-            <View style={{ width: '90%', height: 60, backgroundColor: '#2ecc71', display: 'flex', position: 'absolute', top: 0, left: '5%', borderRadius: 15, marginTop: 10, alignSelf: 'center', justifyContent: 'center' }}>
+            {/* <View style={{ width: '90%', height: 60, backgroundColor: '#2ecc71', display: 'flex', position: 'absolute', top: 0, left: '5%', borderRadius: 15, marginTop: 10, alignSelf: 'center', justifyContent: 'center' }}>
                 <Text style={{ display: 'flex', alignSelf: 'center', color: '#ffffff', fontSize: 18 }}>
                     Sussesfuly unsubscribed
                 </Text>
-            </View>
+            </View> */}
         </View>
         // HERE YOU CAN OVERLAY TABBAR AND HEADER
     )
