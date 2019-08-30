@@ -1,3 +1,3 @@
 # car-rent-react-native
 
-![Alt text](/../master/readme/Untitled.gif?raw=true)
+![Alt text](/../master/readme/Untitled.gif?raw=true =250x)
