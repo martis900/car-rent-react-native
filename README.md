@@ -1,3 +1,3 @@
 # car-rent-react-native
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt text](/../master/readme/Untitled.gif?raw=true)
