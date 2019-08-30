@@ -1,3 +1,3 @@
 # car-rent-react-native
 
-![Alt text](/../master/readme/Untitled.gif?raw=true=100x20)
+![Alt text](/../master/readme/Untitled.gif =100x20)
