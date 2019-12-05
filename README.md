@@ -2,4 +2,4 @@
 
 
 
-<img src="/../master/readme/Untitled.gif" width="600">
+<img src="/../master/readme/Untitled.gif" width="601">
